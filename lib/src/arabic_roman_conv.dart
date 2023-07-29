@@ -10,10 +10,10 @@ class ArabicRomanConv {
   ///toRoman Converts Arabic text to Romanized text.
   /// Based on
   String toRoman(String arabicText) {
-    const romanizedText = '';
+    var romanizedText = '';
     for (final char in arToEnMapping.entries) {
       if (arabicText.contains(char.key)) {
-        romanizedText.replaceFirst(char.key, char.value);
+        romanizedText = char.value;
       }
     }
     return romanizedText;
