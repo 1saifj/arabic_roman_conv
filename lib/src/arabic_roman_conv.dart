@@ -12,7 +12,7 @@ class ArabicRomanConv {
   String toRoman(String arabicText) {
     var romanizedText = '';
     for (final char in arToEnMapping.entries) {
-      if (arabicText.contains(char.key)) {
+      if (arabicText == char.key) {
         romanizedText = char.value;
       }
     }
