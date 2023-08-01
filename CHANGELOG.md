@@ -1,3 +1,4 @@
-# v0.1.0+1
+# v0.1.0-beta1
 
-- convert arabic chars to english
+- convert a word to exact romanization (e.g. "سيف" -> "Saif")
+- convert a sentencte to exact romanization (e.g. "سيف الدين" -> "Saif Aldeen")
