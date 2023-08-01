@@ -13,8 +13,8 @@ class ArabicRomanConv {
   ///toRoman Converts Arabic text to Romanized text.
   /// Based on the keys in the [arToEnMapping] map,
   /// if the word is found in the map, it is replaced with its value.
-  /// 
-  String toRoman(String arabicText) {
+  ///
+  String romanized(String arabicText) {
     var romanizedText = '';
     arabicText.split(' ').forEach((word) {
       if (arToEnMapping.containsKey(word)) {
@@ -23,7 +23,7 @@ class ArabicRomanConv {
       } else {
         word.split('').forEach((char) {
           romanizedText +=
-              arToEnMapping.containsKey(char) ? arToEnMapping[char]! : char;
+              arToEnMapping.containsKey(char) ? arToEnMapping[char]! : '';
         });
         romanizedText += ' ';
       }

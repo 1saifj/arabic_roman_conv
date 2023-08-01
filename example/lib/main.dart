@@ -12,12 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Arabic Roman Conv Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Arbic Roman Conv Demo'),
     );
   }
 }
@@ -33,7 +33,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String _text = '';
-  final ArabicRomanConv romanizationService = const ArabicRomanConv();
+  final ArabicRomanConv romanizationService = ArabicRomanConv();
   void _updateText(String text) {
     setState(() {
       _text = romanizationService.toRoman(text);
@@ -51,11 +51,14 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            TextField(
-              onChanged: _updateText,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Enter Arabic text',
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: TextField(
+                onChanged: _updateText,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Enter Arabic text',
+                ),
               ),
             ),
             Text(
