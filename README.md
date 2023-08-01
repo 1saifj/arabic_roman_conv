@@ -10,7 +10,7 @@ Add `arabic_roman_conv` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  arabic_roman_conv: 0.1.0-dev.2
+  arabic_roman_conv: ^0.1.0-dev.2
 ```
 
 Install it:
